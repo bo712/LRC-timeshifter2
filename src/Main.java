@@ -10,8 +10,9 @@ public class Main {
 //        String name = in.nextLine();
         String name = "/home/kot/IdeaProjects/LRC-timeshifter2/src/notes2.txt";
 
-        System.out.print("Введите смещение: ");
-        String shift = in.nextLine();
+        String shiftValue = "+00:01.20";
+//        System.out.print("Введите смещение: ");
+//        String shiftValue = in.nextLine();
 
         try {
             FileReader reader = new FileReader(name);
