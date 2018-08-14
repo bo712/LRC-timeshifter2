@@ -8,7 +8,7 @@ class ShiftLib {
         return findSign(shiftValue) ? value : -value;
     }
 
-    private static boolean findSign(final String shiftValue) {
+    static boolean findSign(final String shiftValue) {
         return !shiftValue.substring(0,1).equals("-");
     }
 
