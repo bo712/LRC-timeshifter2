@@ -1,4 +1,4 @@
-package viewer;
+package view;
 
 public class ConsoleView {
 
