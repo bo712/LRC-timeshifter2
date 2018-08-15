@@ -30,8 +30,11 @@ class FileWorker {
 
     private static String shiftTimeInLine(final String line, final float ShiftInSec) {
         String str = line.trim();
-        if (str.length() < 9) return str;
-        //тут ещё будет всякая логика реализована
+        //если это нужная для обработки строка
+        if (str.charAt(0) == '[' &&  str.charAt(3) == ':' && str.charAt(9) == ']') {
+            //тут запуск шифта
+            return str;
+        }
         return str;
     }
 
