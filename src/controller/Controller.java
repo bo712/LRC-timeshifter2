@@ -9,9 +9,7 @@ public class Controller {
     public static String enteringInputFile() {
         ConsoleView.enteringInputFile();
         Scanner in = new Scanner(System.in);
-        String ttt = in.nextLine();
-        System.out.println(ttt);
-        return ttt;
+        return in.nextLine();
     }
 
     public static String enteringOutputFile() {
