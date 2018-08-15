@@ -13,6 +13,7 @@ public class TestShiftLib {
     public void convertInTimeCode() {
         Assert.assertEquals("[02:15.37]",ShiftLib.convertInTimeCode(135.37f));
         Assert.assertEquals("[02:15.30]",ShiftLib.convertInTimeCode(135.30f));
+        Assert.assertEquals("[02:15.30]",ShiftLib.convertInTimeCode(135.3f));
         Assert.assertEquals("[00:01.10]",ShiftLib.convertInTimeCode(1.1f));
     }
 
