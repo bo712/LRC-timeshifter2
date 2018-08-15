@@ -30,13 +30,12 @@ class ShiftLib {
 
     static String shifting(final String line, final float shiftValueInSec){
 
-        String timeCodeOfLine = line.substring(1, 9);
+        String timecodeOfLine = line.substring(1, 9);
         String textOfLine = line.substring(10);
 
-        float timeCodeInSec = convertInSec(timeCodeOfLine);
-        float shiftedTimeCode = timeCodeInSec + shiftValueInSec;
-        String newTimeCode = convertInTimeCode(shiftedTimeCode);
-        return newTimeCode.concat(textOfLine);
+        float shiftedTimecode = convertInSec(timecodeOfLine) + shiftValueInSec;
+        String newTimecode = convertInTimeCode(shiftedTimecode);
+        return newTimecode.concat(textOfLine);
     }
 
 }
