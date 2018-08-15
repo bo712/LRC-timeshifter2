@@ -1,10 +1,12 @@
-import model.ShiftLib;
+package model;
+
+import viewer.ConsoleView;
 
 import java.io.*;
 
-class FileWorker {
+public class FileWorker {
 
-    static void read (final String inputFile, final String shiftValue, final String outputFile) {
+    public static void read (final String inputFile, final String shiftValue, final String outputFile) {
 
         float shiftInSec = ShiftLib.convertInSec(shiftValue);
 
@@ -21,8 +23,7 @@ class FileWorker {
             }
             reader.close();
         } catch (IOException e) {
-            System.err.println("Проблемы с чтением исходного файла =(");
-            e.printStackTrace();
+            ConsoleView.readFileError();
         }
     }
 
@@ -48,7 +49,7 @@ class FileWorker {
             writer.flush();
             writer.close();
         } catch (IOException e) {
-            System.err.println("Проблемы с записью результата в файл =(");
+            ConsoleView.writeFileError();
         }
     }
 }

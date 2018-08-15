@@ -14,4 +14,12 @@ public class ConsoleView {
         System.out.print("Введите смещение в формате \"+01:10.25\": ");
     }
 
+    public static void readFileError() {
+        System.err.println("Проблемы с чтением исходного файла =(");
+    }
+
+    public static void writeFileError() {
+        System.err.println("Проблемы с записью результата в файл =(");
+    }
+
 }

@@ -1,6 +1,5 @@
 import controller.Controller;
-
-import java.util.Scanner;
+import model.FileWorker;
 
 public class Main {
 
