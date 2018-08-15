@@ -29,7 +29,7 @@ public class TestShiftLib {
 
     @Test
     public void shifting() {
-        Assert.assertEquals("01:02.17", ShiftLib.shifting("[01:02.17]", 0.00f));
+        Assert.assertEquals("[01:03.28]Hello!", ShiftLib.shifting("[01:02.17]Hello!", 1.11f));
     }
 
 

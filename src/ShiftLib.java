@@ -28,11 +28,15 @@ class ShiftLib {
         return !shiftValue.substring(0,1).equals("-");
     }
 
-    static String shifting(final String line, final float shiftValue){
+    static String shifting(final String line, final float shiftValueInSec){
 
-        String timeCode = line.substring(1, 9);
-        float timeCodeInSec = convertInSec(timeCode);
-        return timeCode;
+        String timeCodeOfLine = line.substring(1, 9);
+        String textOfLine = line.substring(10);
+
+        float timeCodeInSec = convertInSec(timeCodeOfLine);
+        float shiftedTimeCode = timeCodeInSec + shiftValueInSec;
+        String newTimeCode = convertInTimeCode(shiftedTimeCode);
+        return newTimeCode.concat(textOfLine);
     }
 
 }
