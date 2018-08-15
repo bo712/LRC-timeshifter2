@@ -1,5 +1,5 @@
 import controller.Controller;
-import model.FileWorker;
+import model.ReadWriteFiles;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
         String nameOutFile = Controller.enteringOutputFile();
         String shiftValue = Controller.enteringShiftValue();
 
-        FileWorker.read(nameInFile, shiftValue, nameOutFile);
+        ReadWriteFiles.read(nameInFile, shiftValue, nameOutFile);
 
     }
 

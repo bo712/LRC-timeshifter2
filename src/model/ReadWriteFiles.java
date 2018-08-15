@@ -4,7 +4,7 @@ import viewer.ConsoleView;
 
 import java.io.*;
 
-public class FileWorker {
+public class ReadWriteFiles {
 
     public static void read (final String inputFile, final String shiftValue, final String outputFile) {
 
