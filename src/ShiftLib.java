@@ -1,15 +1,31 @@
 class ShiftLib {
 
-    static float convertInSec(final String shiftValue){
+    static float convertInSec(final String timeCode){
 
-        int minute = Integer.parseInt(shiftValue.substring(1, shiftValue.length() - 6));
-        float sec = Float.parseFloat(shiftValue.substring(4));
+        int minute = Integer.parseInt(timeCode.substring(1, timeCode.length() - 6));
+        float sec = Float.parseFloat(timeCode.substring(4));
         float value = (Math.round((minute * 60 + sec) * 100f)) / 100f;
-        return findSign(shiftValue) ? value : -value;
+        return findSign(timeCode) ? value : -value;
+    }
+
+    static String convertInTimeCode (final float valueInSec) {
+        String minutes = String.valueOf((int)valueInSec / 60);
+        if(minutes.length() == 1) {
+            minutes = "0".concat(minutes);
+        }
+        String seconds = String.valueOf(Math.round(valueInSec % 60 * 100) / 100f);
+        return "[".concat(minutes).concat(":").concat(seconds).concat("]");
     }
 
     static boolean findSign(final String shiftValue) {
         return !shiftValue.substring(0,1).equals("-");
+    }
+
+    static String shifting(final String line, final float shiftValue){
+
+        String timeCode = line.substring(1, 9);
+        float timeCodeInSec = convertInSec(timeCode);
+        return timeCode;
     }
 
 }
