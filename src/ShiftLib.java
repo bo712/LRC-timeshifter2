@@ -14,6 +14,14 @@ class ShiftLib {
             minutes = "0".concat(minutes);
         }
         String seconds = String.valueOf(Math.round(valueInSec % 60 * 100) / 100f);
+        System.out.println(seconds);
+        if(seconds.length() == 3){
+            seconds = "0".concat(seconds).concat("0");
+        }else if(seconds.length() == 4 && seconds.charAt(1) == '.') {
+            seconds = "0".concat(seconds);
+        }else if(seconds.length() == 4 && seconds.charAt(2) == '.') {
+            seconds = seconds.concat("0");
+        }
         return "[".concat(minutes).concat(":").concat(seconds).concat("]");
     }
 
