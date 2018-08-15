@@ -16,10 +16,11 @@ class FileWorker {
                 String temp = shiftTimeInLine(line, shiftInSec, outputFile);
                 write(outputFile, temp);
                 line = reader.readLine();
-            reader.close();
             }
+            reader.close();
         } catch (IOException e) {
             System.err.println("Проблемы с чтением исходного файла =(");
+            e.printStackTrace();
         }
     }
 
