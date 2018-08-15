@@ -8,18 +8,15 @@ class FileWorker {
 
         try {
             File file = new File(inputFile);
-            //создаем объект FileReader для объекта File
             FileReader fr = new FileReader(file);
-            //создаем BufferedReader с существующего FileReader для построчного считывания
             BufferedReader reader = new BufferedReader(fr);
-            // считаем сначала первую строку
-            String line = reader.readLine();
 
+            String line = reader.readLine();
             while (line != null) {
                 String temp = shiftTimeInLine(line, shiftInSec, outputFile);
                 write(outputFile, temp);
-                // считываем остальные строки в цикле
                 line = reader.readLine();
+            reader.close();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,8 +37,9 @@ class FileWorker {
     private static void write (final String outputFile, final String line){
 
         try {
-            File newFile = new File(outputFile);
-            BufferedWriter writer = new BufferedWriter(new FileWriter(newFile, true));
+            File file = new File(outputFile);
+            FileWriter fw = new FileWriter(outputFile, true);
+            BufferedWriter writer = new BufferedWriter(fw);
             String lineSeparator = System.getProperty("line.separator");
             writer.write(line + lineSeparator);
             writer.flush();
@@ -49,7 +47,5 @@ class FileWorker {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
