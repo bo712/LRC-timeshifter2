@@ -19,7 +19,7 @@ class FileWorker {
             reader.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Проблемы с чтением исходного файла =(");
         }
     }
 
@@ -45,7 +45,7 @@ class FileWorker {
             writer.flush();
             writer.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Проблемы с записью результата в файл =(");
         }
     }
 }
