@@ -13,7 +13,7 @@ public class Main {
 //        String shiftValue = in.nextLine();
         String shiftValue = "+00:01.20";
         float shiftInSec = ShiftLib.convertInSec(shiftValue);
-//        FileWorker.read(nameInFile, shiftInSec);
+        FileWorker.read(nameInFile, shiftInSec, nameOutFile);
 
     }
 
