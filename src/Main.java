@@ -10,7 +10,5 @@ public class Main {
         String shiftValue = Controller.enteringShiftValue();
 
         ReadWriteFiles.read(nameInFile, shiftValue, nameOutFile);
-
     }
-
 }

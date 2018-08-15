@@ -1,7 +1,6 @@
 package model;
 
 import viewer.ConsoleView;
-
 import java.io.*;
 
 public class ReadWriteFiles {

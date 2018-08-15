@@ -1,7 +1,6 @@
 package controller;
 
 import viewer.ConsoleView;
-
 import java.util.Scanner;
 
 public class Controller {

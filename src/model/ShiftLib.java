@@ -39,5 +39,4 @@ public class ShiftLib {
         String newTimecode = convertInTimeCode(shiftedTimecode);
         return newTimecode.concat(textOfLine);
     }
-
 }

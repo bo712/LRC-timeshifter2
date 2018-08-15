@@ -34,6 +34,4 @@ public class TestShiftLib {
         Assert.assertEquals("[01:00.00]Hello!", ShiftLib.shifting("[01:00.00]Hello!", 0.00f));
         Assert.assertEquals("[03:13.45] Hello Hello", ShiftLib.shifting("[01:00.00] Hello Hello", 133.45f));
     }
-
-
 }
