@@ -2,7 +2,9 @@ import java.io.*;
 
 class FileWorker {
 
-    static void read (final String inputFile, final float shiftInSec, final String outputFile) {
+    static void read (final String inputFile, final String shiftValue, final String outputFile) {
+
+        float shiftInSec = ShiftLib.convertInSec(shiftValue);
 
         try {
             File file = new File(inputFile);
