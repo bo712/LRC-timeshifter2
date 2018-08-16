@@ -11,6 +11,7 @@ public class ShiftLib {
     }
 
     public static String convertInTimeCode (final float valueInSec) {
+
         String minutes = String.valueOf((int)valueInSec / 60);
         if(minutes.length() == 1) {
             minutes = "0".concat(minutes);

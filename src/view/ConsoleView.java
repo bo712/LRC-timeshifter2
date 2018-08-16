@@ -6,7 +6,7 @@ public class ConsoleView {
         System.out.print("Введите путь к файлу lrc: ");
     }
 
-    public static void enteringOutputFile(){
+    public static void enteringOutputFile() {
         System.out.print("Введите путь к целевой директории, куда будет помещён результат: ");
     }
 
@@ -21,5 +21,4 @@ public class ConsoleView {
     public static void writeFileError() {
         System.err.println("Проблемы с записью результата в файл =(");
     }
-
 }
