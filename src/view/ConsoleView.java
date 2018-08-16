@@ -7,7 +7,8 @@ public class ConsoleView {
     }
 
     public static void enteringOutputFile() {
-        System.out.print("Введите путь к целевой директории, куда будет помещён результат: ");
+        String slash = String.valueOf(java.io.File.separatorChar);
+        System.out.print("Выходной файл будет здесь: ".concat(System.getProperty("user.home").concat(slash).concat("out.txt")));
     }
 
     public static void enteringShiftValue(){

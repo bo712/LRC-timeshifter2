@@ -5,7 +5,10 @@ import java.io.*;
 
 public class ReadWriteFiles {
 
-    public static void read (final String inputFile, final String shiftValue, final String outputFile) {
+    public static void read (final String inputFile, final String shiftValue) {
+
+        String slash = String.valueOf(java.io.File.separatorChar);
+        final String outputFile = System.getProperty("user.home").concat(slash).concat("out.txt");
 
         float shiftInSec = ShiftLib.convertInSec(shiftValue);
 
