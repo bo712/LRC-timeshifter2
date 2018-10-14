@@ -1,8 +1,6 @@
-package model;
+final class ShiftLib {
 
-public class ShiftLib {
-
-    public static float convertInSec(final String timeCode){
+    static float convertInSec(final String timeCode){
 
         int minute = Integer.parseInt(timeCode.substring(1, timeCode.length() - 6));
         float sec = Float.parseFloat(timeCode.substring(4));
@@ -10,7 +8,7 @@ public class ShiftLib {
         return findSign(timeCode) ? value : -value;
     }
 
-    public static String convertInTimeCode (final float valueInSec) {
+    static String convertInTimeCode (final float valueInSec) {
 
         String minutes = String.valueOf((int)valueInSec / 60);
         if(minutes.length() == 1) {
@@ -27,11 +25,11 @@ public class ShiftLib {
         return "[".concat(minutes).concat(":").concat(seconds).concat("]");
     }
 
-    public static boolean findSign(final String shiftValue) {
+    static boolean findSign(final String shiftValue) {
         return !shiftValue.substring(0,1).equals("-");
     }
 
-    public static String shifting(final String line, final float shiftValueInSec){
+    static String shifting(final String line, final float shiftValueInSec){
 
         String timecodeOfLine = line.substring(1, 9);
         String textOfLine = line.substring(10);

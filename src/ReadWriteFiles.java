@@ -1,11 +1,10 @@
-package model;
-
-import view.ConsoleView;
 import java.io.*;
 
-public class ReadWriteFiles {
+final class ReadWriteFiles {
 
-    public static void read (final String inputFile, final String shiftValue) {
+	private static final int LENGTH_OF_TIMECODE = 9;
+
+    static void read (final String inputFile, final String shiftValue) {
 
         String slash = String.valueOf(java.io.File.separatorChar);
         final String outputFile = System.getProperty("user.home").concat(slash).concat("out.txt");
@@ -31,10 +30,10 @@ public class ReadWriteFiles {
 
     private static String shiftTimeInLine(final String line, final float shiftInSec, final String outputFile) {
         String str = line.trim();
-        if(str.length() < 9) {
+        if(str.length() < LENGTH_OF_TIMECODE) {
             return str;
         }
-        if (str.charAt(0) == '[' &&  str.charAt(3) == ':' && str.charAt(9) == ']') {
+        if (str.charAt(0) == '[' &&  str.charAt(3) == ':' && str.charAt(LENGTH_OF_TIMECODE) == ']') {
               return ShiftLib.shifting(str, shiftInSec);
         }
         return str;

@@ -1,25 +1,28 @@
-package view;
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
-public class ConsoleView {
+class ConsoleView {
 
-    public static void enteringInputFile(){
+    private ConsoleView() {
+    }
+
+    static void enteringInputFile(){
         System.out.print("Введите путь к файлу lrc: ");
     }
 
-    public static void enteringOutputFile() {
+    static void enteringOutputFile() {
         String slash = String.valueOf(java.io.File.separatorChar);
         System.out.print("Выходной файл будет здесь: ".concat(System.getProperty("user.home").concat(slash).concat("out.txt")));
     }
 
-    public static void enteringShiftValue(){
+    static void enteringShiftValue(){
         System.out.print("Введите смещение в формате \"+01:10.25\": ");
     }
 
-    public static void readFileError() {
+    static void readFileError() {
         System.err.println("Проблемы с чтением исходного файла =(");
     }
 
-    public static void writeFileError() {
+    static void writeFileError() {
         System.err.println("Проблемы с записью результата в файл =(");
     }
 }
