@@ -1,5 +1,3 @@
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
-
 class ConsoleView {
 
     private ConsoleView() {
@@ -7,11 +5,6 @@ class ConsoleView {
 
     static void enteringInputFile(){
         System.out.print("Введите путь к файлу lrc: ");
-    }
-
-    static void enteringOutputFile() {
-        String slash = String.valueOf(java.io.File.separatorChar);
-        System.out.print("Выходной файл будет здесь: ".concat(System.getProperty("user.home").concat(slash).concat("out.txt")));
     }
 
     static void enteringShiftValue(){
