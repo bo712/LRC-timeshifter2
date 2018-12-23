@@ -4,3 +4,4 @@ _# LRC-timeshifter2_
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout)
 
+[![](https://jitpack.io/v/bo712/LRC-timeshifter2.svg)](https://jitpack.io/#bo712/LRC-timeshifter2)
