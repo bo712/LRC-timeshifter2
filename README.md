@@ -1,6 +1,6 @@
 LRC-timeshifter2
 
-A program to work with [lrc](https://en.wikipedia.org/wiki/LRC_(file_format) files synchronized line-by-line with music (similar to subtitle files).  
+A program to work with [lrc](https://en.wikipedia.org/wiki/LRC_(file_файла) files synchronized line-by-line with music (similar to subtitle files).  
 This program allows you to move all timecodes in the existing lrc file for a specified time. 
 
 Программа для работы с файлами формата [lrc](https://ru.wikipedia.org/wiki/LRC_(формат_файла)), синхронизированными построчно с музыкой (похоже на файлы субтитров).  
