@@ -6,7 +6,7 @@ build:
 	./mvnw clean package
 
 run:
-	java -jar ./target/LRC-timeshifter-1.0-SNAPSHOT-jar-with-dependencies.jar
+	java -jar ./target/LRC-timeshifter-2.0-SNAPSHOT-jar-with-dependencies.jar
 
 update:
 	./mvnw versions:update-properties
