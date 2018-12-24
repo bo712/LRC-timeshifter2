@@ -7,8 +7,8 @@
         </Console>
         <RollingFile
                 name="FileLogger"
-                fileName="logs/ConsoleView.log"
-                filePattern="logs/ConsoleView-%d{yyyy-MM-dd}.log"
+                fileName="logs/viewer.ConsoleView.log"
+                filePattern="logs/viewer.ConsoleView-%d{yyyy-MM-dd}.log"
                 append="true">
             <PatternLayout
                     pattern="%-5level: %msg%n"/>

@@ -1,10 +1,12 @@
+import viewer.ConsoleView;
+
 import java.io.*;
 
 final class ReadWriteFiles {
 
 	private static final int LENGTH_OF_TIMECODE = 9;
 
-    private static final String outputFile = "D:\\out.txt";
+    private static final String OUTPUT_FILE = "D:\\out.txt";
 
     static void read (final String inputFile, final String shiftValue) {
         float shiftInSec = ShiftLib.convertInSec(shiftValue);
@@ -32,7 +34,7 @@ final class ReadWriteFiles {
     }
 
     private static void write (final String line) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(OUTPUT_FILE, true))) {
             String lineSeparator = System.getProperty("line.separator");
             writer.write(line + lineSeparator);
             writer.flush();

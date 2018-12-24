@@ -1,3 +1,5 @@
+import viewer.ConsoleView;
+
 import java.util.Scanner;
 
 class Controller {
