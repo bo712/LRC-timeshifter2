@@ -6,6 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame {
+	private boolean anchor = false;
+	public boolean isAnchor() {
+		return anchor;
+	}
+
+
 
 	private  JButton  btnOpenFile;
 	private  JButton  btnSaveFile;
@@ -16,6 +22,9 @@ public class MainWindow extends JFrame {
 
 	private JFileChooser fileChooser;
 
+	private String inputPath;
+	private String outputFile;
+
 	public String getInputPath() {
 		return inputPath;
 	}
@@ -23,10 +32,6 @@ public class MainWindow extends JFrame {
 	public String getOutputFile() {
 		return outputFile;
 	}
-
-	String inputPath;
-	String outputFile;
-
 
 	public MainWindow () {
 		//параметры окна
@@ -87,6 +92,8 @@ public class MainWindow extends JFrame {
 					JOptionPane.showMessageDialog(MainWindow.this,
 							"Новый файл будет сохранён здесь:\n" + fileChooser.getSelectedFile(),
 							"Место сохранения", 1);
+					anchor = true;
+
 				}
 
 			}

@@ -4,11 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         MainWindow mainWindow = new MainWindow();
-        String nameInFile = Controller.enteringInputFile();
+//        String nameInFile = Controller.enteringInputFile();
         String shiftValue = Controller.enteringShiftValue();
-
-//        String nameInFile = mainWindow.getInputPath();
-//        String shiftValue = mainWindow.getOutputFile();
+        String nameInFile = mainWindow.getInputPath();
 
         ReadWriteFiles.read(nameInFile, shiftValue);
     }

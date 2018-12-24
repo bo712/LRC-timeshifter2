@@ -4,7 +4,7 @@ final class ReadWriteFiles {
 
 	private static final int LENGTH_OF_TIMECODE = 9;
 
-    private static final String outputFile = "out.txt";
+    private static final String outputFile = "D:\\out.txt";
 
     static void read (final String inputFile, final String shiftValue) {
         float shiftInSec = ShiftLib.convertInSec(shiftValue);
